@@ -22,6 +22,14 @@
                 <GradientStop Color="#7C3AED" Offset="1"/>
             </LinearGradientBrush>
 
+
+            <!-- ===== Sidebar icons (glossy classic style, PNG resources) ===== -->
+            <BitmapImage x:Key="IconPrograms" UriSource="pack://application:,,,/Assets/nav_programs.png"/>
+            <BitmapImage x:Key="IconStore" UriSource="pack://application:,,,/Assets/nav_store.png"/>
+            <BitmapImage x:Key="IconStartup" UriSource="pack://application:,,,/Assets/nav_startup.png"/>
+            <BitmapImage x:Key="IconJunk" UriSource="pack://application:,,,/Assets/nav_junk.png"/>
+            <BitmapImage x:Key="IconSettings" UriSource="pack://application:,,,/Assets/nav_settings.png"/>
+
             <!-- ===== Buttons ===== -->
             <Style x:Key="BtnBase" TargetType="Button">
                 <Setter Property="Foreground" Value="White"/>
@@ -100,18 +108,18 @@
             <!-- ===== Navigation radio buttons ===== -->
             <Style x:Key="NavButton" TargetType="RadioButton">
                 <Setter Property="Foreground" Value="{StaticResource MutedBrush}"/>
-                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="FontSize" Value="15"/>
                 <Setter Property="FontWeight" Value="SemiBold"/>
                 <Setter Property="Cursor" Value="Hand"/>
-                <Setter Property="Margin" Value="0,3"/>
+                <Setter Property="Margin" Value="0,4"/>
                 <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="RadioButton">
-                            <Border x:Name="bd" CornerRadius="10" Padding="14,12" Background="Transparent">
+                            <Border x:Name="bd" CornerRadius="12" Padding="12,8" Background="Transparent">
                                 <StackPanel Orientation="Horizontal">
-                                    <TextBlock x:Name="ico" Text="{TemplateBinding Tag}" FontFamily="Segoe MDL2 Assets"
-                                               FontSize="16" Width="28" VerticalAlignment="Center"/>
+                                    <Image Source="{TemplateBinding Tag}" Width="36" Height="36" Margin="0,0,14,0" VerticalAlignment="Center"
+                                           RenderOptions.BitmapScalingMode="HighQuality"/>
                                     <ContentPresenter VerticalAlignment="Center"/>
                                 </StackPanel>
                             </Border>
@@ -119,7 +127,6 @@
                                 <Trigger Property="IsMouseOver" Value="True"><Setter TargetName="bd" Property="Background" Value="{StaticResource HoverBrush}"/></Trigger>
                                 <Trigger Property="IsChecked" Value="True">
                                     <Setter TargetName="bd" Property="Background" Value="{StaticResource SelBrush}"/>
-                                    <Setter TargetName="ico" Property="Foreground" Value="{StaticResource AccentBrush}"/>
                                     <Setter Property="Foreground" Value="White"/>
                                 </Trigger>
                             </ControlTemplate.Triggers>
@@ -271,6 +278,7 @@
                 </Setter>
             </Style>
             <Style x:Key="RowItem" TargetType="ListBoxItem">
+                <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
                 <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
                 <Setter Property="Template">
                     <Setter.Value>
