@@ -33,7 +33,7 @@ public sealed class InstalledProgram : Bindable
     public ImageSource? Icon { get => _icon; set => Set(ref _icon, value); }
 
     public string SizeText => Fmt.Size(SizeBytes);
-    public string DateText => InstallDate?.ToString("yyyy-MM-dd") ?? "";
+    public string DateText => InstallDate?.ToString("yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture) ?? "";
     public string Initial => string.IsNullOrWhiteSpace(Name) ? "?" : Name.Trim()[..1].ToUpperInvariant();
     public bool HasUninstaller => !string.IsNullOrWhiteSpace(UninstallString) || !string.IsNullOrWhiteSpace(QuietUninstallString);
 }
