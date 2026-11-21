@@ -9,7 +9,7 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="240"/>
+            <ColumnDefinition Width="256"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
@@ -33,15 +33,15 @@
 
                 <StackPanel Grid.Row="1">
                     <RadioButton x:Name="NavPrograms" Style="{StaticResource NavButton}" GroupName="nav" IsChecked="True"
-                                 Tag="&#xE71D;" Content="{core:T NavPrograms}" Checked="Nav_Checked"/>
+                                 Tag="{StaticResource IconPrograms}" Content="{core:T NavPrograms}" Checked="Nav_Checked"/>
                     <RadioButton x:Name="NavStore" Style="{StaticResource NavButton}" GroupName="nav"
-                                 Tag="&#xE719;" Content="{core:T NavStore}" Checked="Nav_Checked"/>
+                                 Tag="{StaticResource IconStore}" Content="{core:T NavStore}" Checked="Nav_Checked"/>
                     <RadioButton x:Name="NavStartup" Style="{StaticResource NavButton}" GroupName="nav"
-                                 Tag="&#xE7E8;" Content="{core:T NavStartup}" Checked="Nav_Checked"/>
+                                 Tag="{StaticResource IconStartup}" Content="{core:T NavStartup}" Checked="Nav_Checked"/>
                     <RadioButton x:Name="NavJunk" Style="{StaticResource NavButton}" GroupName="nav"
-                                 Tag="&#xE74D;" Content="{core:T NavJunk}" Checked="Nav_Checked"/>
+                                 Tag="{StaticResource IconJunk}" Content="{core:T NavJunk}" Checked="Nav_Checked"/>
                     <RadioButton x:Name="NavSettings" Style="{StaticResource NavButton}" GroupName="nav"
-                                 Tag="&#xE713;" Content="{core:T NavSettings}" Checked="Nav_Checked"/>
+                                 Tag="{StaticResource IconSettings}" Content="{core:T NavSettings}" Checked="Nav_Checked"/>
                 </StackPanel>
 
                 <TextBlock Grid.Row="3" Text="{core:T Tagline}" Foreground="{StaticResource MutedBrush}" FontSize="12"
@@ -119,7 +119,7 @@
                     </Button>
                     <Button Style="{StaticResource DangerButton}" Click="Force_Click">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="&#xE74E;" FontFamily="Segoe MDL2 Assets" Margin="0,1,10,0"/>
+                            <TextBlock Text="&#xE7BA;" FontFamily="Segoe MDL2 Assets" Margin="0,1,10,0"/>
                             <TextBlock Text="{core:T BtnForce}"/>
                         </StackPanel>
                     </Button>
